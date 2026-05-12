@@ -80,7 +80,7 @@ def main() -> None:
     model_args = GPTArgs(
         max_conditioning_length=132300,  # 6s
         min_conditioning_length=66150,   # 3s
-        debug_loading_failures=False,
+        debug_loading_failures=True,
         max_wav_length=255995,           # ~11.6s
         max_text_length=200,
         mel_norm_file=MEL_NORM_FILE,

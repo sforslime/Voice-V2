@@ -19,8 +19,8 @@ META_PATH = OUT_DIR / "metadata.csv"
 
 MODEL_SIZE = "medium"
 LANGUAGE = "en"
-MIN_DUR = 2.0   # seconds — drop segments shorter than this
-MAX_DUR = 15.0  # seconds — drop segments longer than this (rare with Whisper)
+MIN_DUR = 3.5   # seconds — XTTS needs >=3s for conditioning slice; pad for safety
+MAX_DUR = 11.0  # seconds — XTTS max_wav_length is ~11.6s; pad for safety
 
 
 def main() -> None:
