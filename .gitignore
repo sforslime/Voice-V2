@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+
+# Coqui TTS / training artifacts
+checkpoints/
+runs/
+output/
+*.pth
+*.ckpt
+
+# Audio data (usually too large for git)
+data/
+dataset/
+wavs/
+*.wav
+*.mp3
+*.flac
+*.ogg
+# allow small sample/test audio if needed
+!samples/**/*.wav
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
