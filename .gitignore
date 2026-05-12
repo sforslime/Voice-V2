@@ -21,6 +21,8 @@ wavs/
 *.mp3
 *.flac
 *.ogg
+*.opus
+*.zip
 # allow small sample/test audio if needed
 !samples/**/*.wav
 
