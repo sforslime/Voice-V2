@@ -11,7 +11,9 @@ Optional env vars:
     BATCH_SIZE     Default 3 (good for 16-24GB GPUs)
     GRAD_ACCUM     Default 16 (effective batch = BATCH_SIZE * GRAD_ACCUM)
     EPOCHS         Default 20
-    LANGUAGE       Default "en"
+    TTS_LANGUAGE   Default "en". Avoid the bare name LANGUAGE — that's a
+                   standard Linux locale env var (e.g. Colab sets it to
+                   en_US.UTF-8) and would be incorrectly picked up.
     SAVE_STEP      Default 500 (checkpoints survive Colab disconnects)
     LR             Default 5e-6
     REF_WAV        Speaker reference WAV for periodic test samples. Defaults to
@@ -35,7 +37,7 @@ OUTPUT_PATH = Path(os.environ["OUTPUT_PATH"]).resolve()
 BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "3"))
 GRAD_ACCUM = int(os.environ.get("GRAD_ACCUM", "16"))
 EPOCHS = int(os.environ.get("EPOCHS", "20"))
-LANGUAGE = os.environ.get("LANGUAGE", "en")
+LANGUAGE = os.environ.get("TTS_LANGUAGE", "en")
 SAVE_STEP = int(os.environ.get("SAVE_STEP", "500"))
 LR = float(os.environ.get("LR", "5e-6"))
 
